@@ -1,0 +1,340 @@
+{
+	"info": {
+		"_postman_id": "5ab0119f-544f-47fd-a335-ed67fba72b90",
+		"name": "WSTower",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET -   Listar Usuários {Route Params}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Cadastrar Usuário {Request Body}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nome\": \"Usuário Cadastrar\",\r\n    \"Email\": \"usuario@cadastrar.com\",\r\n    \"Apelido\": \"usuarioCadastrar\",\r\n    \"Foto\": null,\r\n    \"Senha\": \"usuarioCadastrar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Login (Request Body}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Login\": \"usuario@cadastrar.com\",\r\n    \"Senha\": \"usuarioCadastrar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Alterar Dados {Request Body}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nome\": \"Usuário Alterar\",\r\n    \"Email\": \"usuario@alterar.com\",\r\n    \"Apelido\": \"usuarioAlterar\",\r\n    \"Foto\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/usuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"usuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Alterar Senha {Route Params And Request Body}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Senha\": \"alterarSenha\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/usuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"usuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jogo.Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Jogo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Jogo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jogo.ListarPorData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Jogo/Data/2020-07-11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Jogo",
+						"Data",
+						"2020-07-11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jogo.ListarPorEstadio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Jogo/Estadio/Arena",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Jogo",
+						"Estadio",
+						"Arena"
+					]
+				},
+				"description": "Nomes com acentos não funcionam."
+			},
+			"response": []
+		},
+		{
+			"name": "Jogo.ListarPorSelecao",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Jogo/Selecao/Brasil",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Jogo",
+						"Selecao",
+						"Brasil"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jogador.ListarPorSelecao",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Jogador/Selecao/Brasil",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Jogador",
+						"Selecao",
+						"Brasil"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jogadores.PesquisarPorNome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Jogador/Sami Khedira",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Jogador",
+						"Sami Khedira"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Selecao.Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Selecao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Selecao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Selecao.ListarComJogadores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Selecao/Completo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Selecao",
+						"Completo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Selecao.ListarEmOrdem",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Selecao/Nome",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Selecao",
+						"Nome"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
